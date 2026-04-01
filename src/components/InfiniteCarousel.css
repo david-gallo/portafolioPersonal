@@ -1,0 +1,35 @@
+.inf-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  cursor: grab;
+  user-select: none;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+  padding: 0.5rem 0;
+}
+
+.inf-carousel__track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  will-change: transform;
+}
+
+@media (max-width: 768px) {
+  .inf-carousel__track {
+    gap: 1rem;
+  }
+}

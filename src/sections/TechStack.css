@@ -1,0 +1,23 @@
+/* ===== TECH STACK SECTION ===== */
+
+.tech-stack {
+  grid-area: techstack;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .tech-list {
+    gap: 0.6rem;
+  }
+}

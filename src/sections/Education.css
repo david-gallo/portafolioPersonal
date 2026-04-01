@@ -1,0 +1,44 @@
+/* ===== EDUCATION ===== */
+
+.education {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.education h2 {
+  margin: 0;
+  text-align: center;
+}
+
+.education__subtitle {
+  color: var(--text);
+  font-size: 0.9rem;
+  text-align: center;
+  margin: 0;
+}
+
+.carousel__slide {
+  flex-shrink: 0;
+  width: 280px;
+  height: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+  cursor: pointer;
+}
+
+.carousel__slide:hover {
+  transform: scale(1.05);
+  border-color: var(--accent-border);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .carousel__slide {
+    width: 200px;
+  }
+}

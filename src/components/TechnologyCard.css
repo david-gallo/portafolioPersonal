@@ -1,0 +1,102 @@
+/* ===== CARD INDIVIDUAL ===== */
+
+.technology-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0.8rem;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  transition: padding 300ms ease, filter 300ms ease, gap 300ms ease;
+  cursor: default;
+  overflow: hidden;
+}
+
+.technology-card:hover {
+  padding-inline: 1.6rem;
+  gap: 0.5rem;
+}
+
+.tech-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-h);
+  white-space: nowrap;
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-width 300ms ease, opacity 250ms ease;
+}
+
+.technology-card:hover .tech-label {
+  max-width: 120px;
+  opacity: 1;
+}
+
+.technology-card .tech-icon {
+  width: 64px;
+  height: 64px;
+  will-change: transform;
+  color: var(--text);
+}
+
+.technology-card h3 {
+  margin: 0;
+  color: var(--text-h);
+  font-size: 1.1rem;
+}
+
+.technology-card p {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .technology-card {
+    padding: 0.5rem;
+  }
+
+  .technology-card:hover {
+    padding-inline: 1rem;
+  }
+
+  .technology-card .tech-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* ===== COMPORTAMIENTO EN GRUPO ===== */
+/* Cualquier contenedor directo de cards se vuelve flex */
+
+:has(> .technology-card + .technology-card) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Al hacer hover en una card, las demas se oscurecen */
+
+:has(> .technology-card:hover) > .technology-card:not(:hover) {
+  filter: brightness(0.72);
+}
+
+/* Las cards despues de la hovered se desplazan a la derecha */
+
+:has(> .technology-card:hover) > .technology-card:hover ~ .technology-card {
+  transform: translateX(16px);
+  transition: transform 300ms ease, filter 300ms ease;
+}
+
+/* Las cards antes de la hovered se desplazan a la izquierda */
+
+:has(> .technology-card:hover) > .technology-card:has(~ .technology-card:hover) {
+  transform: translateX(-16px);
+  transition: transform 300ms ease, filter 300ms ease;
+}

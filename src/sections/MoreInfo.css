@@ -1,0 +1,26 @@
+/* ===== MORE INFO LAYER (Capa 2) ===== */
+
+.more-info-layer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 3rem;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .more-info-layer {
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .more-info-layer {
+    padding: 1.5rem 0.8rem;
+    gap: 1.2rem;
+  }
+}

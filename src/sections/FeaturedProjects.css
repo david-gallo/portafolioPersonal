@@ -1,0 +1,42 @@
+/* ===== FEATURED PROJECTS SECTION ===== */
+
+.featured-projects {
+  grid-area: projects;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 0;
+}
+
+.featured-projects .title {
+  margin: 0;
+  text-align: center;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+  padding-inline: 1rem;
+  box-sizing: border-box;
+  flex: 1;
+  align-items: stretch;
+}
+
+@media (max-width: 768px) {
+  .featured-projects {
+    align-items: center;
+  }
+
+  .featured-projects .title {
+    font-size: 1.1rem;
+  }
+
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}

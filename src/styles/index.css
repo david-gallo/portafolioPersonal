@@ -1,0 +1,52 @@
+@import './reset.css';
+@import './variables.css';
+
+/* ===== ESTILOS GLOBALES ===== */
+
+body {
+  font: 18px/1.45 var(--sans);
+  letter-spacing: 0.18px;
+  color: var(--text);
+  background: var(--bg);
+  overflow: hidden;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+#root {
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  letter-spacing: -1.68px;
+  margin: 0;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+}
+
+/* ===== FOCUS VISIBLE ===== */
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}

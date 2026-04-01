@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://david-gallo.github.io/portafolioPersonal/sitemap.xml
