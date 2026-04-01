@@ -1,13 +1,15 @@
 import InfiniteCarousel from '../components/InfiniteCarousel'
 import './Education.css'
 
+const BASE = import.meta.env.BASE_URL
+
 const diplomas = [
-  { src: '/6a5607da-d51c-4c40-b782-8ba780dd303e (1).png', title: 'Desarrollo Web' },
-  { src: '/24e5eb54-5b3f-4190-bdd7-8a18fc442f7b.png', title: 'JavaScript' },
-  { src: '/a8701508-1cf5-4afc-bceb-9efcdf789cf0 (1).png', title: 'React JS' },
-  { src: '/30f384c3-8070-459b-824a-6a0bf7de004c.png', title: 'Backend I: Desarrollo Avanzado' },
-  { src: '/1c960a47-6fcc-458f-b3ad-72b67749c659.png', title: 'Backend II: Diseño y Arquitectura' },
-  { src: '/2ee5d56a-8440-40c5-9f8a-2e57c1232aac.png', title: 'Backend III: Testing y Escalabilidad' },
+  { src: `${BASE}diploma-desarrollo-web.png`, title: 'Desarrollo Web' },
+  { src: `${BASE}diploma-javascript.png`, title: 'JavaScript' },
+  { src: `${BASE}diploma-react.png`, title: 'React JS' },
+  { src: `${BASE}diploma-backend-1.png`, title: 'Backend I: Desarrollo Avanzado' },
+  { src: `${BASE}diploma-backend-2.png`, title: 'Backend II: Diseño y Arquitectura' },
+  { src: `${BASE}diploma-backend-3.png`, title: 'Backend III: Testing y Escalabilidad' },
 ]
 
 const Education = () => (

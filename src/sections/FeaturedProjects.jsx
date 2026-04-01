@@ -6,7 +6,7 @@ const projects = [
     title: 'Clicker Game',
     description: 'Juego interactivo con sistema de mejoras, logros desbloqueables y auto-click. Persistencia con localStorage y animaciones con Anime.js.',
     tags: ['JavaScript', 'SCSS', 'Anime.js'],
-    image: '/clicker-game-1.jpeg',
+    image: `${import.meta.env.BASE_URL}clicker-game-1.jpeg`,
     links: [
       { label: 'Web', url: 'https://david-gallo.github.io/clicker_game' },
       { label: 'GitHub', url: 'https://github.com/david-gallo/clicker_game' },
