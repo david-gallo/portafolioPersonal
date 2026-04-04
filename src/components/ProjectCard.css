@@ -97,27 +97,78 @@
 
 @media (max-width: 768px) {
   .project-card {
-    width: min(100%, 400px);
-    flex-direction: row;
+    flex-direction: column;
     max-width: 100%;
   }
 
   .project-card__preview {
-    width: 100px;
-    height: auto;
-    min-height: 100%;
+    display: none;
   }
 
   .project-card__info {
-    padding: 0.5rem 0.8rem;
-    gap: 0.25rem;
+    padding: 0.6rem 0.8rem;
+    gap: 0.3rem;
   }
 
   .project-card__desc {
     font-size: 0.75rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   .project-card h3 {
     font-size: 0.95rem;
+  }
+
+  .project-card__tags {
+    gap: 0.3rem;
+  }
+
+  .tag {
+    font-size: 0.65rem;
+    padding: 0.1rem 0.4rem;
+  }
+
+  .project-card__links {
+    gap: 0.5rem;
+  }
+
+  .project-link {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.6rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .project-card__info {
+    padding: 0.4rem 0.6rem;
+    gap: 0.2rem;
+  }
+
+  .project-card__desc {
+    font-size: 0.7rem;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+  }
+
+  .project-card h3 {
+    font-size: 0.85rem;
+  }
+
+  .tag {
+    font-size: 0.6rem;
+    padding: 0.08rem 0.3rem;
+  }
+
+  .project-card__links {
+    gap: 0.4rem;
+  }
+
+  .project-link {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
   }
 }

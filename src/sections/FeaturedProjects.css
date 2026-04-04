@@ -27,16 +27,32 @@
 
 @media (max-width: 768px) {
   .featured-projects {
-    align-items: center;
+    align-items: stretch;
   }
 
   .featured-projects .title {
     font-size: 1.1rem;
+    text-align: center;
   }
 
   .projects-container {
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    align-items: stretch;
+    gap: 0.7rem;
+    padding-inline: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .featured-projects {
+    gap: 0.5rem;
+  }
+
+  .featured-projects .title {
+    font-size: 0.95rem;
+  }
+
+  .projects-container {
+    gap: 0.5rem;
   }
 }
